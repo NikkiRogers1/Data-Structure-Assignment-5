@@ -2,14 +2,16 @@ public class Main {
 
     public static void main(String[] args) {
         
-        ArrayCollection<Artifact> artifacts = new ArrayCollection<>();
-        
+        LinkedCollection<Artifact> artifacts = new LinkedCollection<>();
+
         Artifact artifact1 = new Artifact("A101", "Merlins staff", "1700's");
 
         Artifact artifact2 = new Artifact("B205", "Cleopatra's crown", "60 BC");
 
         Artifact artifact3 = new Artifact("C309", "Zeus thunderbolt", "1 BC ");
     
+
+
         artifacts.add(artifact1);
         artifacts.add(artifact2);
         artifacts.add(artifact3);
@@ -25,6 +27,10 @@ public class Main {
 
         System.out.println(artifacts.get(artifact1));
         System.out.println(artifacts.get(artifact3));
+
+        artifacts.remove(artifact3);
+        System.out.println(artifacts.size());
+        System.out.println(artifacts.get(artifact1));
 
 
     }
