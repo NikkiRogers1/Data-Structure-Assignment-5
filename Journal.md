@@ -5,3 +5,6 @@ Overriding equals() is important because the two objects have the same ID, so if
 Phase 2- 
 The LinkedCollection can add an item in O(1) time because it does not have to go through the whole list to add something. It creates a new node, connects it to the current head, and then makes the new node the head. One downside is that linked lists use more memory because each node has to store the information and a link to the next node. Another downside is cache locality. The nodes are not necessarily stored next to each other in memory, so going through the list can be slower than an array because an array keeps its elements together.
 
+Phase 3-
+Comparable tells Java how to put objects in order. In my Artifact class, I used the ID to decide the order, so Collections.sort() can sort the artifacts by their ID's.
+The equals and compareTo methods should agree with each other. My equals method checks if the ID's are the same, and compareTo also compares ID's. If artifacts have the same ID, equals should return true and compareTo should return 0. This keeps java from trating the two artifacts differently.

@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Artifact {
+public class Artifact implements Comparable<Artifact> {
     private String id;
     private String name;
     private String era;
@@ -40,5 +40,11 @@ public class Artifact {
         Artifact artifact = (Artifact) obj;
     
     return Objects.equals(id, artifact.id );
+}
+
+@Override 
+public int compareTo(Artifact other) {
+    return this.id.compareTo(other.id);
+
 }
 }
